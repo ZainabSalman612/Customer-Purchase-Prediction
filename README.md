@@ -211,13 +211,53 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Inspired by real-world e-commerce analytics
 - Designed for learning and demonstration purposes
 
-## 📞 Support
+## 🚀 Deployment
 
-If you have questions or issues:
-1. Check the [Issues](https://github.com/your-repo/issues) page
-2. Review the code comments for implementation details
-3. Test with the provided synthetic dataset
+### ❌ Why Not Netlify?
+Netlify is designed for **static websites** and doesn't support Python applications. Your Streamlit app requires:
+- Python runtime server
+- ML model loading (scikit-learn)
+- Interactive Python execution
 
----
+### ✅ Recommended Deployment Options
 
-**Happy predicting! 🎯**
+#### 1. **Streamlit Cloud** (Easiest - Recommended)
+**Perfect for Streamlit apps!**
+1. Go to [share.streamlit.io](https://share.streamlit.io)
+2. Connect your GitHub repository
+3. Select `app.py` as the main file
+4. Click Deploy!
+5. **Free tier available!**
+
+#### 2. **Heroku** (Most Popular)
+**Supports Python applications**
+1. **Install Heroku CLI**:
+   ```bash
+   # Download from https://devcenter.heroku.com/articles/heroku-cli
+   heroku login
+   ```
+
+2. **Create and deploy**:
+   ```bash
+   heroku create your-customer-predictor-app
+   git add .
+   git commit -m "Deploy to Heroku"
+   git push heroku main
+   heroku open
+   ```
+
+#### 3. **Railway** (Modern Alternative)
+**Easy GitHub integration**
+1. Go to [railway.app](https://railway.app)
+2. Connect your GitHub repository
+3. Railway auto-detects Python and deploys
+4. **Free tier available!**
+
+#### 4. **Vercel** (Advanced)
+Requires converting to API routes - more complex setup needed.
+
+### 🌐 Live Demo URLs
+Your app will be available at:
+- **Streamlit Cloud**: `https://your-app.streamlit.app`
+- **Heroku**: `https://your-app-name.herokuapp.com`
+- **Railway**: `https://your-app.up.railway.app`
